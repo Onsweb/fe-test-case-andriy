@@ -1,0 +1,324 @@
+/*! HTML5 Boilerplate v7.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+.block-wrapper {
+  max-width: 1100px;
+  width: 100%;
+  display: -ms-flexbox;
+  display:flex;
+  margin: 150px auto 0;
+  overflow: hidden;
+}
+.left-block,
+.right-block {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+}
+.left-block {
+  width: 52%;
+}
+.left-block .image-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.left-block .image-wrapper img {
+  height: 100%;
+}
+.left-block .image-wrapper:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(48, 98, 255, 0.7);
+}
+.left-block-shape {
+  height: 100%;
+  background-color: #ededed;
+  min-width: 13%;
+  margin-right: 2.5%;
+  position: relative;
+}
+.right-block-shape {
+  position: absolute;
+  top: 0;
+  right: -4.6%;
+  width: 9%;
+  height: 100%;
+  background-color: #fff;
+  transform: skewX(-8deg);
+  transform-origin: right;
+}
+.left-block-shape .bot-bg {
+  top: -2%;
+  height: 30%;
+  background-color: #3062ff;
+}
+.top-block-shape {
+  position: absolute;
+  top: 1.5%;
+  right: 0;
+  left: 0;
+  width: 111%;
+  height: 16.5%;
+  background-color: #fff;
+  transform: skewY(8deg);
+  transform-origin: top right;
+  z-index: 1;
+}
+.bot-bg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  background-color: #fff;
+  transform: skewY(-8deg);
+  transform-origin: bottom right;
+}
+.right-block {
+  background-color: #ededed;
+  display: flex;
+  width: 49%;
+  z-index: 1;
+  margin-left: 1%;
+  padding: 8.5% 0 14%;
+}
+.right-block .top-block-shape {
+  transform-origin: top left;
+  transform: skewY(-8deg);
+  top: 0;
+}
+.right-block .bot-bg {
+  transform-origin: bottom left;
+  transform: skewY(8deg);
+  bottom: -12%;
+  left: -9%;
+  width: 109%;
+  height: 32%;
+}
+.right-block .bot-bg.blue {
+  background-color: #3062ff;
+  transform: skewY(-8deg);
+  height: 34%;
+  bottom: -14%;
+  left: -8%;
+  width: 108%;
+}
+.right-block .right-block-shape {
+  left: -3%;
+  background-color: #ededed;
+  height: 80%;
+  width: 12%;
+}
+.right-block .text-wrapper {
+  max-width: 364px;
+  margin-left: 13%;
+  z-index: 1;
+}
+.right-block .text-wrapper h1 {
+  font: bold 1.55em Helvetica Neue,Helvetica,Arial,sans-serif;
+  color: #3161ff;
+}
+.right-block .text-wrapper p {
+  font: 0.75em Helvetica Neue,Helvetica,Arial,sans-serif;
+  line-height: 1.7em;
+}
+.right-block .text-wrapper a {
+  font: 0.7em Helvetica Neue,Helvetica,Arial,sans-serif;
+  text-transform: uppercase;
+  background-color: #3062ff;
+  color: #fff;
+  width: 180px;
+  margin-top: 15px;
+  padding: 10px 8px;
+  display: inline-block;
+  box-sizing: border-box;
+  text-decoration: none;
+  position: relative;
+}
+.right-block .text-wrapper a:after {
+  content: "→";
+  border: 1px solid #fff;
+  color: #fff;
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  height: 18px;
+  width: 18px;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .right-block {
+    padding: 12% 0 20%;
+  }
+  .left-block .top-block-shape {
+     top: 0.5%;
+   }
+  .left-block .right-block-shape {
+    right: -2.6%;
+  }
+  .right-block .right-block-shape {
+    left: -4%;
+    width: 15%;
+  }
+  .right-block .top-block-shape {
+    left: -2%;
+  }
+  .right-block .text-wrapper {
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .block-wrapper {
+    flex-direction: column;
+  }
+  .left-block,
+  .right-block {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .left-block {
+    order: 2;
+  }
+  .right-block {
+    padding: 17.5% 0;
+  }
+  .left-block-shape,
+  .right-block-shape {
+    display: none;
+  }
+  .left-block .top-block-shape {
+    display: none;
+  }
+  .left-block .image-wrapper:before {
+    background: linear-gradient(#3062ff 16%, rgba(48, 98, 255, 0.5));
+  }
+  .right-block .bot-bg {
+    transform-origin: bottom left;
+    transform: skewY(8deg);
+    left: 0;
+    bottom: -3.5%;
+    height: 3.5%;
+    width: 100%;
+  }
+  .right-block .bot-bg.blue {
+    background-color: #3062ff;
+    transform: skewY(-8deg);
+    height: 21%;
+    bottom: -21%;
+    left: 0;
+    width: 100%;
+  }
+  .right-block .text-wrapper {
+    text-align: center;
+  }
+}
+
