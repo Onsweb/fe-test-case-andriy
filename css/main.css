@@ -98,7 +98,6 @@ textarea {
    Author's custom styles
    ========================================================================== */
 .block-wrapper {
-  /* max-width: 1100px; */
   width: 100%;
   display: -ms-flexbox;
   display:flex;
@@ -115,10 +114,11 @@ textarea {
 .middle {
   display: -ms-flexbox;
   display: flex;
+  -ms-flex: 0 1 960px;
   flex: 0 1 960px;
 }
 .left-block {
-  width: 51%;
+  width: 52%;
 }
 .left-block .image-wrapper {
   position: relative;
@@ -142,40 +142,43 @@ textarea {
   background-color: #ededed;
   position: relative;
   z-index: 1;
-  flex: 1 0 6.5%;
+  -ms-flex: 1 0 7%;
+  flex: 1 0 7%;
   display: flex;
+  margin-left: -0.5%;
 }
 .side-block-shape.left {
-  margin-right: 1.3%;
+  margin-right: 14px;
 }
 .divider {
   position: absolute;
   right: 43%;
-  width: 7.5%;
-  top: 10%;
-  height: 72.4%;
+  width: 7.3%;
+  top: 3%;
+  height: 79%;
   background-color: #ededed;
-  transform: skew(-7deg, -7deg);
+  transform: skew(-8deg, -11deg);
   transform-origin: right;
 }
 .divider.white {
   right: 50%;
   background-color: #fff;
-  width: 1%;
+  width: 11px;
   z-index: 11;
   height: 79%;
   transform: skewX(-8deg);
+  top: 10%;
 }
 .side-block-shape .bot-bg {
-  top: -31%;
-  height: 60%;
+  top: -71%;
+  height: 100%;
   background-color: #3062ff;
   transform-origin: bottom right;
   transform: skewY(-8deg);
 }
 .top-block-shape {
   position: absolute;
-  top: -192px;
+  top: -196px;
   height: 276px;
   background-color: #fff;
   transform: skewY(8deg);
@@ -205,14 +208,14 @@ textarea {
 .right-block {
   background-color: #ededed;
   display: flex;
-  width: 48%;
+  width: 47%;
   margin-left: 1%;
-  padding: 10% 0 14%;
+  padding: 10% 0 18%;
 }
 .top-block-shape.right {
   transform-origin: top left;
   transform: skewY(-8deg);
-  left: 51%;
+  left: 50.9%;
 }
 .bot-bg.left {
   transform-origin: bottom left;
@@ -228,12 +231,12 @@ textarea {
   height: 100%;
   bottom: -82%;
   right: 0;
-  width: 52%;
+  width: 51.9%;
   transform-origin: bottom left;
 }
 .right-block .text-wrapper {
   max-width: 364px;
-  margin-left: 15%;
+  margin-left: 13%;
   z-index: 1;
 }
 .right-block .text-wrapper h1 {
@@ -281,6 +284,7 @@ textarea {
     display: none;
   }
   .middle {
+    -ms-flex: 1 1;
     flex: 1 1;
     width: 100%;
   }
@@ -291,12 +295,16 @@ textarea {
     left: -4%;
     width: 4%;
   }
-  .right-block .top-block-shape {
-    /* left: -2%; */
-  }
   .right-block .text-wrapper {
     margin: 0 auto;
     padding: 0 10px;
+    text-align: center;
+  }
+  .bot-bg.right {
+    left: 46%;
+  }
+  .bot-bg.blue {
+    width: 54%;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -313,6 +321,12 @@ textarea {
   }
   .right-block {
     padding: 17.5% 0;
+  }
+  .right-block .text-wrapper {
+    max-width: 320px;
+  }
+  .right-block .text-wrapper h1 {
+    font: bold 1.3em Helvetica Neue,Helvetica,Arial,sans-serif;
   }
   .top-block-shape.right {
     left: 0;
@@ -344,9 +358,6 @@ textarea {
     transform: rotate(-85deg);
     width: 4%;
     top: 88px;
-  }
-  .right-block .text-wrapper {
-    text-align: center;
   }
 }
 
